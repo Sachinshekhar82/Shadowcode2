@@ -6,4 +6,8 @@ Static HTML/CSS/JS showcase with three mini websites:
 - `sites/atelier/index.html`
 - `sites/pulse/index.html`
 
+Debugging practice example:
+
+- `buggy-example.js`
+
 Open `index.html` first to browse the demos.
