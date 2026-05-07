@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShadowCode | AI Security Auditor</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="glass-bg"></div>
+    
+    <nav class="navbar">
+        <div class="logo">
+            <span class="logo-icon">◈</span>
+            <h1>Shadow<span>Code</span></h1>
+        </div>
+        <div class="status-badge">
+            <span class="pulse"></span> System Active
+        </div>
+    </nav>
+
+    <main class="dashboard">
+        <aside class="sidebar">
+            <div class="nav-item active">Overview</div>
+            <div class="nav-item">Vulnerabilities</div>
+            <div class="nav-item">AI Remediation</div>
+            <div class="nav-item">Settings</div>
+        </aside>
+
+        <section class="main-content">
+            <header class="content-header">
+                <h2>Security Dashboard</h2>
+                <button id="scanBtn" class="primary-btn">Start New Audit</button>
+            </header>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <label>Critical Risks</label>
+                    <div class="value" id="criticalCount">0</div>
+                </div>
+                <div class="stat-card">
+                    <label>Medium Risks</label>
+                    <div class="value" id="mediumCount">0</div>
+                </div>
+                <div class="stat-card">
+                    <label>Files Scanned</label>
+                    <div class="value">124</div>
+                </div>
+                <div class="stat-card">
+                    <label>Health Score</label>
+                    <div class="value health-score">84%</div>
+                </div>
+            </div>
+
+            <div class="results-panel">
+                <div class="panel-header">
+                    <h3>Recent Findings</h3>
+                    <div class="filter">All Severity</div>
+                </div>
+                <div id="findingsList" class="findings-list">
+                    <!-- Dynamic Findings Go Here -->
+                    <div class="finding-placeholder">Click 'Start New Audit' to analyze code...</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="ai-side-panel">
+            <h3>AI Analyst</h3>
+            <div class="ai-chat" id="aiChat">
+                <p class="ai-msg">Awaiting audit results to provide remediation strategies...</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
