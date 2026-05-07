@@ -1,0 +1,37 @@
+name: ShadowCode Security Audit
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: Run ShadowCode AI Scanner
+        working-directory: .
+        run: |
+          python agent/gh_action_report.py
+
+      - name: Check for Critical Vulnerabilities
+        run: |
+          # Example: Fail the build if any High severity issues are found
+          # This is optional depending on how strict you want to be
+          # python agent/check_fail.py 
+          echo "Audit complete. Check Step Summary for details."
