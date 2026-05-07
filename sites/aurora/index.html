@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aurora Studio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="page">
+      <header class="topbar">
+        <div>
+          <p class="brand">Aurora Studio</p>
+          <p class="subtle">Designing interfaces that feel alive.</p>
+        </div>
+        <a href="../../index.html" class="back">Back to showcase</a>
+      </header>
+
+      <section class="hero">
+        <div>
+          <p class="kicker">Next-gen product launch</p>
+          <h1>Brightness for your digital workflow.</h1>
+          <p class="copy">A sci-fi landing page with a live signal meter, strong contrast, and layered glass panels.</p>
+          <div class="actions">
+            <a href="#stats" class="button primary">Explore metrics</a>
+            <a href="#story" class="button secondary">Read story</a>
+          </div>
+        </div>
+
+        <aside class="signal">
+          <div class="ring"></div>
+          <div class="signal-panel">
+            <p>System status</p>
+            <strong id="statusValue">97%</strong>
+            <span id="statusLabel">Stable</span>
+          </div>
+        </aside>
+      </section>
+
+      <section class="stats" id="stats">
+        <article>
+          <strong>24K</strong>
+          <span>daily active sessions</span>
+        </article>
+        <article>
+          <strong>3.2s</strong>
+          <span>average response time</span>
+        </article>
+        <article>
+          <strong>99.4%</strong>
+          <span>stability score</span>
+        </article>
+      </section>
+
+      <section class="story" id="story">
+        <div class="feature">
+          <h2>Built for momentum</h2>
+          <p>Use the control below to make the product pulse faster or slower. It updates the visual state in real time.</p>
+        </div>
+        <div class="control">
+          <label for="pace">Pulse pace</label>
+          <input id="pace" type="range" min="0.6" max="2.4" value="1.2" step="0.1" />
+        </div>
+      </section>
+    </div>
+  </body>
+  </html>

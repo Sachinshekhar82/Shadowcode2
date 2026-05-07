@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pulse Board</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <div>
+          <p class="brand">Pulse Board</p>
+          <p class="subtext">A compact dashboard for focus, tasks, and energy.</p>
+        </div>
+        <a href="../../index.html">Back to showcase</a>
+      </header>
+
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Daily rhythm</p>
+          <h1>Structure the day around the work that actually matters.</h1>
+          <p class="copy">This dashboard uses a bold split layout and a live breathing meter that shifts as you change the pace slider.</p>
+        </div>
+        <div class="meter">
+          <div class="orb"></div>
+          <div class="meter-label">
+            <span>Focus level</span>
+            <strong id="focusValue">74%</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel-grid">
+        <article>
+          <span>Task</span>
+          <strong>Design review</strong>
+        </article>
+        <article>
+          <span>Task</span>
+          <strong>Write release note</strong>
+        </article>
+        <article>
+          <span>Task</span>
+          <strong>Ship landing page</strong>
+        </article>
+      </section>
+
+      <section class="footer-panel">
+        <label for="pace">Breathing pace</label>
+        <input id="pace" type="range" min="1" max="10" value="6" />
+      </section>
+    </div>
+  </body>
+  </html>
