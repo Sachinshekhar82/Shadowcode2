@@ -1,4 +1,3 @@
 def login(user, password):
-    if password == "admin123":
-        return True
+    # TODO: Implement proper hash-based authentication
     return False
